@@ -46,7 +46,7 @@ function sendMessage() {
   // })
 
         var oHttp = new XMLHttpRequest();
-        var OPENAI_API_KEY = "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";
+        var OPENAI_API_KEY = "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";
         oHttp.open("POST", "https://api.openai.com/v1/chat/completions");
         oHttp.setRequestHeader("Accept", "application/json");
         oHttp.setRequestHeader("Content-Type", "application/json");
