@@ -10,6 +10,12 @@ inputField.addEventListener("keypress", function(event) {
   }
 });
 
+function decryptData() {
+  
+  var decryptedData = CryptoJS.AES.decrypt("U2FsdGVkX18HUOrq2Gys4dDCkEP0OMN/ldD0PrrszS94TuIZ8EEY6Y7oQ7fEAJXxlRia6zdDTBMyin8wqVXIxAu6s5VYrCL0ly0OzbY+dCE=", "1258f*#%$6cjkc");
+  var key_return = decryptedData.toString(CryptoJS.enc.Utf8);
+  return key_return
+}
 function sendMessage() {
   const message = inputField.value;
   inputField.value = "";
@@ -46,7 +52,8 @@ function sendMessage() {
   // })
 
         var oHttp = new XMLHttpRequest();
-        var OPENAI_API_KEY = "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";
+        
+        var OPENAI_API_KEY = decryptData();
         oHttp.open("POST", "https://api.openai.com/v1/chat/completions");
         oHttp.setRequestHeader("Accept", "application/json");
         oHttp.setRequestHeader("Content-Type", "application/json");
