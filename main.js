@@ -14,6 +14,7 @@ function decryptData() {
   
   var decryptedData = CryptoJS.AES.decrypt("U2FsdGVkX18HUOrq2Gys4dDCkEP0OMN/ldD0PrrszS94TuIZ8EEY6Y7oQ7fEAJXxlRia6zdDTBMyin8wqVXIxAu6s5VYrCL0ly0OzbY+dCE=", "1258f*#%$6cjkc");
   var key_return = decryptedData.toString(CryptoJS.enc.Utf8);
+  console.log(key_return)
   return key_return
 }
 function sendMessage() {
