@@ -12,7 +12,7 @@ inputField.addEventListener("keypress", function(event) {
 
 function decryptData() {
   
-  var decryptedData = CryptoJS.AES.decrypt("U2FsdGVkX18HUOrq2Gys4dDCkEP0OMN/ldD0PrrszS94TuIZ8EEY6Y7oQ7fEAJXxlRia6zdDTBMyin8wqVXIxAu6s5VYrCL0ly0OzbY+dCE=", "1258f*#%$6cjkc");
+  var decryptedData = CryptoJS.AES.decrypt("U2FsdGVkX1/Dl4tGsoOhLaDphcED8OIUp6XqXhhX/0Mmv7KSzu3t/HHmFccIFG2FA5DTlIDE4WSTmUqwx2sw+OGiObsDsNCbnDu5i8tZP44=", "1258f*#%$6cjkc");
   var key_return = decryptedData.toString(CryptoJS.enc.Utf8);
   console.log(key_return)
   return key_return
